@@ -11,7 +11,6 @@ Console.Write("Введите количество строк массива: ")
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число, которое : ");
 int[,] array = new int[m, n];
 for (int i = 0; i < array.GetLength(0); i++)
 {
@@ -33,6 +32,6 @@ if (a > m || b > n)
     Console.WriteLine("Такого числа в массиве нет");
 else
 {
-    var c = array.GetValue(a, b);
+    var c = array.GetValue(a - 1, b - 1);
     Console.WriteLine(c);
 }
